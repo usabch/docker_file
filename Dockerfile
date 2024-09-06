@@ -50,7 +50,7 @@ RUN mkdir build && cd build && \
 ENV PATH="/usr/local/bin:${PATH}"
 
 RUN pip install helics helics[cli] numpy==1.24.4 scipy pypower
-RUN pip install pyrlu
+RUN pip install pyrlu==0.1.2
 
 # Verify installation
 RUN gridlabd --version && helics_broker --version

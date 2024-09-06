@@ -1,0 +1,24 @@
+{
+    "broker": true,
+    "federates":[
+        {
+            "directory":".",
+            "exec":"python3 1abc_Transmission_simulator.py -c 1a",
+            "host":"localhost",
+            "name":"1a_Transmission"
+        },
+        {
+            "directory":".",
+            "exec":"gridlabd 1a_IEEE_123_feeder.glm",
+            "host":"localhost",
+            "name":"1a_GridLABD"
+        },
+        {
+            "directory":".",
+            "exec":"gridlabd 1a_grid_two.glm",
+            "host":"localhost",
+            "name":"1a_2GridLABD"
+        }
+    ],
+    "name":"1a-T-D-Cosimulation-HELICSRunner"
+}
